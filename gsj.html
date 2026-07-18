@@ -12,7 +12,6 @@
             --soft-pink: #f472b6;
             --sky-blue: #22d3ee;
             --elegant-gold: #fcd34d;
-            --glow-white: #f8fafc;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -25,35 +24,21 @@
             position: relative;
         }
         
-        /* Magical Background */
-        .bg-container {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background: 
-                radial-gradient(circle at 50% 20%, rgba(192, 38, 211, 0.15) 0%, transparent 60%),
-                radial-gradient(circle at 30% 70%, rgba(34, 211, 238, 0.12) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
         .sakura-bg {
             position: fixed;
             inset: 0;
             z-index: -1;
-            background-image: 
-                url('https://picsum.photos/id/1015/2000/1200'),
-                linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85));
+            background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)), url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
-            filter: brightness(0.7) contrast(1.1);
-            opacity: 0.85;
+            filter: brightness(0.75);
         }
         
         .floating-sakura {
             position: absolute;
             font-size: 28px;
-            opacity: 0.7;
-            animation: fallSakura 18s linear infinite;
+            opacity: 0.75;
+            animation: fallSakura 16s linear infinite;
             z-index: -1;
             text-shadow: 0 0 12px #f472b6;
         }
@@ -63,34 +48,26 @@
             100% { transform: translateY(120vh) rotate(720deg); }
         }
         
-        /* Glassmorphism */
         .glass {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.09);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.18);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
         }
         
-        header {
+        /* Progress Bar - Top */
+        .top-progress {
             position: sticky;
             top: 0;
-            z-index: 50;
-            padding: 16px 20px;
-            background: rgba(15,23,42,0.85);
+            z-index: 100;
+            background: rgba(15,23,42,0.95);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(192,38,211,0.2);
-        }
-        
-        .xp-bar-container {
-            background: rgba(0,0,0,0.4);
-            border-radius: 9999px;
-            padding: 6px;
-            border: 2px solid var(--elegant-gold);
-            box-shadow: 0 0 25px rgba(252, 211, 77, 0.5);
+            padding: 12px 20px 10px;
+            border-bottom: 1px solid rgba(192,38,211,0.3);
         }
         
         .xp-bar {
-            height: 14px;
+            height: 13px;
             background: linear-gradient(90deg, var(--sky-blue), var(--soft-pink), var(--neon-purple));
             border-radius: 9999px;
             position: relative;
@@ -101,217 +78,51 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            animation: xpShimmer 2.5s linear infinite;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+            animation: xpShimmer 2.8s linear infinite;
         }
         
-        @keyframes xpShimmer {
-            0% { transform: translateX(-150%); }
-            100% { transform: translateX(400%); }
-        }
+        @keyframes xpShimmer { 0% { transform: translateX(-150%); } 100% { transform: translateX(400%); } }
         
-        .level-badge```html
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ساكورا | Sakura Sensei • JLPT N5</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Cairo:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --neon-purple: #c026d3;
-            --soft-pink: #f472b6;
-            --sky-blue: #22d3ee;
-            --elegant-gold: #fcd34d;
-            --glow-white: #f8fafc;
-        }
-        
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Cairo', system-ui, sans-serif;
-            background: linear-gradient(180deg, #0f172a 0%, #1e1133 50%, #0f172a 100%);
-            color: #f8fafc;
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-        
-        /* Magical Background */
-        .bg-container {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background: 
-                radial-gradient(circle at 50% 20%, rgba(192, 38, 211, 0.15) 0%, transparent 60%),
-                radial-gradient(circle at 30% 70%, rgba(34, 211, 238, 0.12) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .sakura-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background-image: 
-                url('https://picsum.photos/id/1015/2000/1200'),
-                linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85));
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.7) contrast(1.1);
-            opacity: 0.85;
-        }
-        
-        .floating-sakura {
-            position: absolute;
-            font-size: 28px;
-            opacity: 0.7;
-            animation: fallSakura 18s linear infinite;
-            z-index: -1;
-            text-shadow: 0 0 12px #f472b6;
-        }
-        
-        @keyframes fallSakura {
-            0% { transform: translateY(-100px) rotate(0deg); }
-            100% { transform: translateY(120vh) rotate(720deg); }
-        }
-        
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-        
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            padding: 16px 20px;
-            background: rgba(15,23,42,0.85);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(192,38,211,0.2);
-        }
-        
-        .xp-bar-container {
-            background: rgba(0,0,0,0.4);
-            border-radius: 9999px;
-            padding: 6px;
-            border: 2px solid var(--elegant-gold);
-            box-shadow: 0 0 25px rgba(252, 211, 77, 0.5);
-        }
-        
-        .xp-bar {
-            height: 14px;
-            background: linear-gradient(90deg, var(--sky-blue), var(--soft-pink), var(--neon-purple));
-            border-radius: 9999px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .xp-bar::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            animation: xpShimmer 2.5s linear infinite;
-        }
-        
-        @keyframes xpShimmer {
-            0% { transform: translateX(-150%); }
-            100% { transform: translateX(400%); }
-        }
-        
-        .level-badge {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--elegant-gold);
-            color: #1e2937;
-            font-weight: 900;
-            font-size: 13px;
-            padding: 2px 14px;
-            border-radius: 9999px;
-            box-shadow: 0 4px 15px rgba(252,211,77,0.6);
-        }
-        
-        .welcome-card {
-            margin: 24px 20px 32px;
-            padding: 28px 24px;
-            border-radius: 28px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .welcome-card::before {
-            content: '🌸';
-            position: absolute;
-            font-size: 120px;
-            opacity: 0.08;
-            top: -20px;
-            right: -20px;
-        }
-        
-        .path-container {
-            padding: 20px;
-            position: relative;
+        .welcome-card, .motivational-panel, .path-container {
+            margin: 20px;
         }
         
         .path-beam {
             position: absolute;
-            top: 110px;
+            top: 115px;
             left: 50%;
             width: 6px;
-            height: calc(100% - 240px);
-            background: linear-gradient(to bottom, var(--sky-blue), var(--soft-pink), var(--neon-purple));
-            box-shadow: 0 0 30px var(--neon-purple);
+            height: calc(100% - 260px);
+            background: linear-gradient(to bottom, #22d3ee, #f472b6, #c026d3);
+            box-shadow: 0 0 35px #c026d3;
             transform: translateX(-50%);
             border-radius: 9999px;
             z-index: 1;
         }
         
         .stage {
-            width: 110px;
-            height: 110px;
+            width: 108px;
+            height: 108px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            margin: 40px auto;
+            margin: 38px auto;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
-            z-index: 2;
-            box-shadow: 0 0 40px rgba(192,38,211,0.6);
-        }
-        
-        .stage.locked {
-            filter: brightness(0.6) grayscale(0.8);
-            box-shadow: 0 0 20px rgba(148,163,184,0.4);
+            transition: all 0.4s ease;
+            box-shadow: 0 0 35px rgba(192,38,211,0.7);
         }
         
         .stage-inner {
-            width: 92px;
-            height: 92px;
+            width: 88px;
+            height: 88px;
             border-radius: 50%;
-            background: radial-gradient(circle, #fff, #e0f2fe);
+            background: radial-gradient(circle, #fff, #bae6fd);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
-            box-shadow: inset 0 0 30px rgba(192,38,211,0.5);
-            position: relative;
-        }
-        
-        .stage-label {
-            margin-top: 12px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 15px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            font-size: 46px;
         }
         
         .keyboard {
@@ -319,40 +130,36 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(15,23,42,0.95);
+            background: rgba(15,23,42,0.96);
             backdrop-filter: blur(24px);
-            border-top: 1px solid rgba(192,38,211,0.3);
-            padding: 12px 8px 20px;
-            z-index: 100;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
+            border-top: 1px solid rgba(192,38,211,0.4);
+            padding: 14px 10px 22px;
+            z-index: 200;
+            display: none; /* مخفي افتراضياً */
         }
         
         .key-row {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 8px;
-            max-width: 520px;
-            margin: 0 auto;
+            gap: 9px;
         }
         
         .key {
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.13);
+            border: 1px solid rgba(255,255,255,0.25);
             color: white;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             font-family: 'Noto Sans JP', sans-serif;
             height: 58px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: all 0.1s;
         }
         
         .key:active {
-            transform: scale(0.92) translateY(2px);
+            transform: scale(0.9);
             background: var(--neon-purple);
         }
         
@@ -365,250 +172,117 @@
         }
         
         .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform-style: preserve-3d;
         }
         
         .flip-card.flipped .flip-card-inner {
             transform: rotateY(180deg);
         }
-        
-        .flip-face {
-            position: absolute;
-            inset: 0;
-            backface-visibility: hidden;
-            border-radius: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 32px 20px;
-        }
-        
-        .flip-face-front {
-            background: linear-gradient(135deg, #1e2937, #334155);
-        }
-        
-        .flip-face-back {
-            background: linear-gradient(135deg, #4c1d95, #7e22ce);
-            transform: rotateY(180deg);
-        }
-        
-        .motivational-panel {
-            margin: 30px 20px;
-            padding: 28px;
-            border-radius: 24px;
-            text-align: center;
-            line-height: 1.7;
-            font-size: 15.5px;
-            border: 1px solid rgba(251, 191, 36, 0.3);
-        }
     </style>
 </head>
 <body>
-    <div class="bg-container"></div>
     <div class="sakura-bg"></div>
     
-    <!-- Header -->
-    <header>
-        <div class="flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div style="font-size:32px; filter:drop-shadow(0 0 12px #f472b6);">🌸</div>
-                <div>
-                    <div style="font-weight:900; font-size:21px; letter-spacing:-0.5px;">ساكورا</div>
-                    <div style="font-size:11px; color:#c4d0ff; margin-top:-4px;">JLPT N5 • Sensei</div>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-5 text-sm">
-                <div>⭐ <span id="star-count" style="font-weight:800;">24</span></div>
-                <div>🔥 <span id="streak" style="font-weight:800;">7</span></div>
-            </div>
+    <!-- Progress Bar at Top -->
+    <div class="top-progress">
+        <div class="flex justify-between items-center mb-2 text-sm">
+            <div style="font-weight:900;">Lv. 12 • سعاد</div>
+            <div>⭐ <span id="stars">28</span></div>
         </div>
-        
-        <!-- XP Bar -->
-        <div class="mt-5 relative">
-            <div class="level-badge">Lv. 12</div>
-            <div class="xp-bar-container">
-                <div class="xp-bar w-[68%]"></div>
-            </div>
-            <div class="flex justify-between text-xs mt-2 px-1 font-medium">
-                <div>2480 <span style="color:#fcd34d">XP</span></div>
-                <div class="text-emerald-400">68% • 142/210 كلمة</div>
-            </div>
+        <div class="xp-bar w-[72%]"></div>
+        <div class="flex justify-between text-xs mt-1">
+            <span>2840 XP</span>
+            <span class="text-emerald-400">72% • 148/210 كلمة</span>
         </div>
-    </header>
+    </div>
     
     <!-- Welcome -->
-    <div class="welcome-card glass mx-5">
-        <div style="font-size:42px; margin-bottom:12px;">👋</div>
-        <h1 style="font-size:22px; font-weight:900; line-height:1.3; margin-bottom:8px;">
-            مرحبًا سعاد! 🌸
-        </h1>
-        <p style="font-size:15px; line-height:1.6; color:#e0e7ff;">
-            أهلًا بكِ في رحلة ساكورا لتعلّم اللغة اليابانية.<br>
-            <strong>Mehdi Sensei</strong> جاهز ليُرشدكِ في هذه المغامرة التعليمية الممتعة.
+    <div class="welcome-card glass">
+        <h1 style="font-size:23px; text-align:center; margin-bottom:10px;">مرحبًا سعاد! 🌸</h1>
+        <p style="text-align:center; line-height:1.6; color:#e0e7ff;">
+            أهلًا بكِ في رحلة ساكورا لتعلّم اللغة اليابانية
         </p>
     </div>
     
     <!-- Learning Path -->
-    <div class="path-container">
+    <div class="path-container relative">
         <div class="path-beam"></div>
         
-        <div class="grid grid-cols-3 gap-x-4 gap-y-16 relative z-10" style="max-width:520px; margin:0 auto;">
-            <!-- Stage 1 -->
-            <div onclick="startLesson(1)" class="stage" style="grid-column:1; background:radial-gradient(circle,#7dd3fc,#bae6fd);">
-                <div class="stage-inner">🌸</div>
-                <div class="stage-label">الأساسيات</div>
-            </div>
-            
-            <!-- Stage 2 -->
-            <div onclick="startLesson(2)" class="stage" style="grid-column:3; background:radial-gradient(circle,#f9a8d4,#fbcfe8);">
-                <div class="stage-inner">🍡</div>
-                <div class="stage-label">المدود</div>
-            </div>
-            
-            <!-- Stage 3 -->
-            <div onclick="startLesson(3)" class="stage locked" style="grid-column:2; background:radial-gradient(circle,#a5b4fc,#c4d0ff);">
-                <div class="stage-inner">⛩️</div>
-                <div class="stage-label">النطق</div>
-            </div>
-            
-            <!-- Stage 4 -->
-            <div onclick="startLesson(4)" class="stage" style="grid-column:1; background:radial-gradient(circle,#f472b6,#db2777);">
-                <div class="stage-inner">🗡️</div>
-                <div class="stage-label">المركبات</div>
-            </div>
-            
-            <!-- Stage 5 -->
-            <div onclick="startLesson(5)" class="stage locked" style="grid-column:3; background:radial-gradient(circle,#67e8f9,#22d3ee);">
-                <div class="stage-inner">🏯</div>
-                <div class="stage-label">اليوميات</div>
-            </div>
-            
-            <!-- Stage 6 -->
-            <div onclick="startLesson(6)" class="stage" style="grid-column:2; background:radial-gradient(circle,#c084fc,#a855f7);">
-                <div class="stage-inner">🐉</div>
-                <div class="stage-label">N5 كامل</div>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-14 relative z-10" style="max-width:540px; margin:0 auto;">
+            <div onclick="startLesson(1)" class="stage"><div class="stage-inner">🌸</div><div class="text-center mt-3 font-bold">الأساسيات</div></div>
+            <div onclick="startLesson(2)" class="stage"><div class="stage-inner">🍥</div><div class="text-center mt-3 font-bold">المدود</div></div>
+            <div onclick="startLesson(3)" class="stage"><div class="stage-inner">🎏</div><div class="text-center mt-3 font-bold">النطق</div></div>
+            <div onclick="startLesson(4)" class="stage"><div class="stage-inner">⛩️</div><div class="text-center mt-3 font-bold">المركبات</div></div>
+            <div onclick="startLesson(5)" class="stage"><div class="stage-inner">🏯</div><div class="text-center mt-3 font-bold">اليوميات</div></div>
+            <div onclick="startLesson(6)" class="stage"><div class="stage-inner">🐉</div><div class="text-center mt-3 font-bold">N5 كامل</div></div>
+        </div>
+    </div>
+    
+    <!-- Study Card -->
+    <div class="px-5">
+        <div onclick="flipCurrentCard()" id="study-card" class="flip-card mx-auto">
+            <div class="flip-card-inner glass" id="flip-inner">
+                <div class="flip-face" style="backface-visibility:hidden; background:linear-gradient(135deg,#1e2937,#334155); border-radius:24px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div style="font-size:88px; margin-bottom:16px;" id="hiragana-front">あさ</div>
+                    <div style="font-size:26px; font-weight:700;" id="arabic-front">صباح</div>
+                    <button onclick="event.stopImmediatePropagation(); speakWord()" style="margin-top:24px; width:56px; height:56px; border-radius:50%; background:#22d3ee; border:none; font-size:26px; box-shadow:0 6px 0 #164e63;">🔊</button>
+                </div>
             </div>
         </div>
     </div>
     
     <!-- Motivational -->
     <div class="motivational-panel glass mx-5">
-        <div style="font-size:38px; margin-bottom:16px;">🌸</div>
-        <p style="font-weight:600; color:#e0f2fe;">
+        <p style="font-size:15.5px; line-height:1.75; text-align:center;">
             الأخت الفاضلة سعاد،<br>
-            إن رحلة تعلم اللغة اليابانية خطوة استثنائية تعبر عن شغفكِ الكبير...
-        </p>
-        <p style="margin-top:18px; font-size:14px; color:#c4d0ff;">
             كل حرف تحفظينه اليوم هو لبنة في بناء إنجازكِ الكبير ✨🇯🇵
         </p>
     </div>
     
-    <!-- Current Study Card -->
-    <div class="px-5">
-        <div onclick="flipCurrentCard()" id="study-card" class="flip-card mx-auto">
-            <div class="flip-card-inner glass" id="flip-inner">
-                <!-- Front -->
-                <div class="flip-face flip-face-front">
-                    <div style="font-size:92px; margin-bottom:12px; filter:drop-shadow(0 0 20px #67e8f9);" id="hiragana-front">あ</div>
-                    <div class="text-3xl font-bold text-white" id="arabic-front">صباح</div>
-                    <button onclick="event.stopImmediatePropagation(); speakWord()" 
-                            style="margin-top:20px; background:rgba(34,211,238,0.9); color:white; border:none; width:52px; height:52px; border-radius:50%; font-size:22px; box-shadow:0 6px 0 #164e63;">
-                        🔊
-                    </button>
-                </div>
-                <!-- Back -->
-                <div class="flip-face flip-face-back">
-                    <div style="font-size:28px; color:#e0f2fe; margin-bottom:8px;">النطق الصحيح</div>
-                    <div style="font-size:68px; font-family:'Noto Sans JP',sans-serif; font-weight:700;" id="hiragana-back">あさ</div>
-                    <div id="romaji-back" style="margin-top:12px; font-size:17px; color:#fcd34d;">a sa</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Keyboard -->
-    <div class="keyboard">
+    <!-- Keyboard (يظهر فقط عند أسئلة الكتابة) -->
+    <div id="keyboard" class="keyboard">
         <div class="key-row">
             <div class="key">あ</div><div class="key">い</div><div class="key">う</div><div class="key">え</div><div class="key">お</div>
         </div>
         <div class="key-row mt-3">
             <div class="key">か</div><div class="key">き</div><div class="key">く</div><div class="key">け</div><div class="key">こ</div>
         </div>
-        <div class="key-row mt-3">
-            <div class="key">さ</div><div class="key">し</div><div class="key">す</div><div class="key">せ</div><div class="key">そ</div>
-        </div>
-        <div onclick="completeLesson()" class="mt-6 text-center py-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl font-bold text-lg shadow-xl">
-            ✅ أنهيت المرحلة
+        <div onclick="submitAnswer()" class="mt-6 py-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl text-center font-bold text-lg">
+            تحقق ✓
         </div>
     </div>
     
     <script>
-        // Sakura petals
+        // Sakura animation
         function createSakura() {
             const petal = document.createElement('div');
             petal.className = 'floating-sakura';
-            petal.textContent = ['🌸','🌺','🍃'][Math.floor(Math.random()*3)];
+            petal.textContent = '🌸';
             petal.style.left = Math.random() * 100 + 'vw';
-            petal.style.animationDuration = (12 + Math.random() * 14) + 's';
-            petal.style.opacity = Math.random() * 0.6 + 0.4;
+            petal.style.animationDuration = (14 + Math.random() * 12) + 's';
             document.body.appendChild(petal);
-            
-            setTimeout(() => petal.remove(), 30000);
+            setTimeout(() => petal.remove(), 32000);
         }
         
-        setInterval(createSakura, 420);
+        setInterval(createSakura, 380);
         
-        // Sample data
-        let currentCard = {
-            hiragana: "あさ",
-            arabic: "صباح",
-            romaji: "asa"
-        };
+        // Show keyboard when typing question is active
+        function showKeyboard() {
+            document.getElementById('keyboard').style.display = 'block';
+        }
         
-        function speakWord() {
-            if ('speechSynthesis' in window) {
-                const utterance = new SpeechSynthesisUtterance("あさ");
-                utterance.lang = 'ja-JP';
-                speechSynthesis.speak(utterance);
-            }
+        function hideKeyboard() {
+            document.getElementById('keyboard').style.display = 'none';
         }
         
         function flipCurrentCard() {
             document.getElementById('study-card').classList.toggle('flipped');
         }
         
-        function startLesson(n) {
-            alert(`بدء المرحلة ${n} • مرحلة ساكورا جميلة 🌸`);
-            // In real app would navigate to lesson
-        }
-        
-        function completeLesson() {
-            if(confirm("تهانينا! هل تريدين الانتقال إلى المرحلة التالية؟")) {
-                createSakura(); createSakura(); createSakura();
-            }
-        }
-        
-        // Init
-        window.onload = () => {
-            // Spawn initial petals
-            for(let i = 0; i < 12; i++) {
-                setTimeout(createSakura, i * 180);
-            }
-            
-            // Demo card flip after delay
-            setTimeout(() => {
-                document.getElementById('study-card').classList.add('flipped');
-                setTimeout(() => {
-                    document.getElementById('study-card').classList.remove('flipped');
-                }, 2200);
-            }, 1600);
-        };
-    </script>
-</body>
-</html>
+        function speakWord() {
+            if ('speechSynthesis' in window) {
+                const u = new SpeechSynthesisUtterance("あさ");
+                u.lang = 'ja-JP';
+                speechSynthesis.speak(u);
+           
